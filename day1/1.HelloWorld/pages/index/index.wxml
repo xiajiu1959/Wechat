@@ -1,0 +1,5 @@
+<view>
+  <!-- 这个模板是我定义的模板 -->
+  <view>123</view>
+  <template name="index">456</template>
+</view>

@@ -1,0 +1,8 @@
+<view>
+
+  <template name="a">
+    <view>这是main的块元素</view>
+  </template>
+  <view>Hello,World---23456789</view>
+
+</view>

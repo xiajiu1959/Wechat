@@ -1,0 +1,48 @@
+<view class='view1'>
+  <!-- 1.第一个helloWorld小程序 -->
+  HelloWorld
+  <view>
+    Hello,China
+  </view>
+</view>
+<!-- 
+    1.微信小程序开发框架之--WXML
+      --数据绑定
+      --列表渲染
+      --条件渲染
+      --模板引用
+ -->
+<view>
+  <!-- 1.微信小程序开发框架--数据绑定 -->
+  <text>{{ message }}</text>
+  <text data-name="{{ username }}"></text>
+  <!-- 1.1.运算绑定 -->
+  <view hidden='{{ flag ? true : false }}'>蜡笔小新</view>
+</view>
+
+
+<view>
+  <!-- 2.微信小程序开发框架--列表渲染 -->
+  <block wx:for="{{items}}" wx:for-item="item" wx:key="index">
+    <view>{{ index }}:{{ item.name }}</view>
+  </block>
+</view>
+
+<view>
+  <!-- 3.微信小程序开发框架--条件渲染 -->
+  <view>今天 准备吃什么?</view>
+  <view wx:if="{{condition === 1}}"> 大餐-牛肉 </view>
+  <view wx:elif="{{condition === 2}}"> 大餐-粥 </view>
+  <view wx:else>面食</view>
+</view>
+
+
+<view>
+  <!-- 4.微信小程序开发框架--模板引用 import -->
+  <import src="../index/index.wxml"></import>
+  <template is="index"></template>
+
+  <!-- include-->
+  <include src="../main/main.wxml" />
+  <template is="a"></template>
+</view>
